@@ -1,0 +1,1877 @@
+{
+  "snippets": [
+    {
+      "id": "ERR_001",
+      "code": "def greet(name):\nprint('Hello', name)",
+      "error_type": "Missing_Indent",
+      "difficulty": "Novice",
+      "topic": "Function Definition",
+      "correction": "def greet(name):\n    print('Hello', name)",
+      "hint": "Which line should be part of the function block?",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 2.0,
+        "Logic": 0.5,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_002",
+      "code": "for i in range(5):\n        print(i)\n    print('Done')",
+      "error_type": "Unexpected_Indent",
+      "difficulty": "Novice",
+      "topic": "For Loops",
+      "correction": "for i in range(5):\n    print(i)\nprint('Done')",
+      "hint": "Is the final print supposed to be inside or outside the loop?",
+      "skill_rewards": {
+        "Loops": 0.5,
+        "Recursion": 0.0,
+        "Syntax": 2.0,
+        "Logic": 0.5,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_003",
+      "code": "print(total)\ntotal = 42",
+      "error_type": "Undefined_Variable",
+      "difficulty": "Novice",
+      "topic": "Variables",
+      "correction": "total = 42\nprint(total)",
+      "hint": "Are you using a variable before giving it a value?",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 1.0,
+        "Logic": 1.0,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_004",
+      "code": "value = input('Enter: ')\nvaleu = int(value)",
+      "error_type": "Misspelled_Identifier",
+      "difficulty": "Novice",
+      "topic": "Strings and Input",
+      "correction": "value = input('Enter: ')\nvalue_int = int(value)",
+      "hint": "Look at the variable names. Do they match exactly?",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 1.5,
+        "Logic": 0.5,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_005",
+      "code": "if x > 10\n    print('big')",
+      "error_type": "Missing_Colon",
+      "difficulty": "Novice",
+      "topic": "If Statements",
+      "correction": "if x > 10:\n    print('big')",
+      "hint": "Does the if-statement have all required punctuation?",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 2.0,
+        "Logic": 0.5,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_006",
+      "code": "nums = [1, 2, 3\nprint(nums)",
+      "error_type": "Bad_Parentheses",
+      "difficulty": "Novice",
+      "topic": "Lists",
+      "correction": "nums = [1, 2, 3]\nprint(nums)",
+      "hint": "Check where your list literal opens and closes.",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 2.0,
+        "Logic": 0.0,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_007",
+      "code": "i = 0\nwhile i < 5:\n    print(i)",
+      "error_type": "Infinite_Loop",
+      "difficulty": "Novice",
+      "topic": "While Loops",
+      "correction": "i = 0\nwhile i < 5:\n    print(i)\n    i += 1",
+      "hint": "How does the loop variable change?",
+      "skill_rewards": {
+        "Loops": 3.5,
+        "Recursion": 0.0,
+        "Syntax": 0.0,
+        "Logic": 1.0,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_008",
+      "code": "for i in range(1, 5):\n    print(numbers[i])",
+      "error_type": "Off_By_One",
+      "difficulty": "Intermediate",
+      "topic": "For Loops",
+      "correction": "for i in range(len(numbers)):\n    print(numbers[i])",
+      "hint": "Are you iterating over the correct range of indices?",
+      "skill_rewards": {
+        "Loops": 3.75,
+        "Recursion": 0.0,
+        "Syntax": 0.0,
+        "Logic": 3.0,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_009",
+      "code": "x = 5\ny = 10\nif x = y:\n    print('same')",
+      "error_type": "Wrong_Comparison",
+      "difficulty": "Novice",
+      "topic": "Conditionals",
+      "correction": "if x == y:\n    print('same')",
+      "hint": "Are you using assignment or comparison?",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 0.5,
+        "Logic": 2.5,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_010",
+      "code": "score = 95\nif score > 90:\n    print('A')\nelif score > 80:\n    print('B')",
+      "error_type": "Misordered_Conditions",
+      "difficulty": "Novice",
+      "topic": "Conditionals",
+      "correction": "score = 95\nif score > 80:\n    print('B')\nelif score > 90:\n    print('A')",
+      "hint": "Which condition should be checked first?",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 0.0,
+        "Logic": 3.0,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_011",
+      "code": "def countdown(n):\n    if n == 0:\n        print('Done')\n    else:\n        countdown(n-1)\n        print(n)\n        countdown(n-1)",
+      "error_type": "Wrong_Recursive_Call",
+      "difficulty": "Advanced",
+      "topic": "Recursion",
+      "correction": "def countdown(n):\n    if n == 0:\n        print('Done')\n    else:\n        print(n)\n        countdown(n-1)",
+      "hint": "Are you calling recursion more times than needed?",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 7.0,
+        "Syntax": 0.0,
+        "Logic": 4.0,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_012",
+      "code": "def factorial(n):\n    return n * factorial(n-1)",
+      "error_type": "Missing_Base_Case",
+      "difficulty": "Intermediate",
+      "topic": "Recursion",
+      "correction": "def factorial(n):\n    if n == 0:\n        return 1\n    return n * factorial(n-1)",
+      "hint": "When should recursion stop?",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 5.25,
+        "Syntax": 0.0,
+        "Logic": 2.25,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_013",
+      "code": "nums = [1,2,3]\nprint(nums[5])",
+      "error_type": "IndexError",
+      "difficulty": "Novice",
+      "topic": "Lists",
+      "correction": "nums = [1,2,3]\nif 5 < len(nums):\n    print(nums[5])",
+      "hint": "Is index 5 valid for this list?",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 0.0,
+        "Logic": 1.0,
+        "Data_Structures": 2.0
+      }
+    },
+    {
+      "id": "ERR_014",
+      "code": "nums = [1,2,3]\nprint(nums + 4)",
+      "error_type": "Type_Mismatch",
+      "difficulty": "Novice",
+      "topic": "List Operations",
+      "correction": "nums = [1,2,3]\nprint(nums + [4])",
+      "hint": "Are you adding the correct type to the list?",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 0.0,
+        "Logic": 2.0,
+        "Data_Structures": 1.0
+      }
+    },
+    {
+      "id": "ERR_015",
+      "code": "data = {'a': 1}\nprint(data['b'])",
+      "error_type": "KeyError",
+      "difficulty": "Novice",
+      "topic": "Dictionaries",
+      "correction": "data = {'a': 1}\nprint(data.get('b', 'missing'))",
+      "hint": "Is the key guaranteed to exist in the dictionary?",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 0.0,
+        "Logic": 1.0,
+        "Data_Structures": 2.0
+      }
+    },
+    {
+      "id": "ERR_016",
+      "code": "data = {1: 'one'}\nprint(data['1'])",
+      "error_type": "Wrong_Key_Type",
+      "difficulty": "Novice",
+      "topic": "Dictionary Access",
+      "correction": "data = {1: 'one'}\nprint(data[1])",
+      "hint": "Are the key types consistent between dictionary definition and lookup?",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 1.0,
+        "Logic": 0.0,
+        "Data_Structures": 2.0
+      }
+    },
+    {
+      "id": "ERR_017",
+      "code": "f = open('missing_file.txt', 'r')\nprint(f.read())",
+      "error_type": "FileNotFound",
+      "difficulty": "Novice",
+      "topic": "File Reading",
+      "correction": "try:\n    f = open('missing_file.txt', 'r')\n    print(f.read())\nexcept FileNotFoundError:\n    print('File not found')",
+      "hint": "Are you sure the file exists before opening it?",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 0.0,
+        "Logic": 1.5,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_018",
+      "code": "f = open('output.txt', 'r')\nf.write('hello')",
+      "error_type": "Wrong_File_Mode",
+      "difficulty": "Novice",
+      "topic": "File Writing",
+      "correction": "f = open('output.txt', 'w')\nf.write('hello')",
+      "hint": "What file mode allows writing?",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 0.0,
+        "Logic": 2.0,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_019",
+      "code": "class Person:\n    def __init__(self, name):\n        self.name = name\n\np = Person()\nprint(p.name)",
+      "error_type": "Wrong_Constructor_Call",
+      "difficulty": "Intermediate",
+      "topic": "Classes",
+      "correction": "p = Person('Alice')\nprint(p.name)",
+      "hint": "Does the constructor require arguments?",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 1.5,
+        "Logic": 0.0,
+        "Data_Structures": 3.0
+      }
+    },
+    {
+      "id": "ERR_020",
+      "code": "class Car:\n    def __init__(self, brand):\n        self.brand = brand\n\nc = Car('Toyota')\nprint(c.color)",
+      "error_type": "AttributeError",
+      "difficulty": "Intermediate",
+      "topic": "Classes",
+      "correction": "print(hasattr(c, 'brand'))  # or define the attribute before use",
+      "hint": "Is 'color' ever defined in the object?",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 0.0,
+        "Logic": 2.25,
+        "Data_Structures": 3.0
+      }
+    },
+    {
+      "id": "ERR_021",
+      "code": "if x > 10:\nprint('big')",
+      "error_type": "Missing_Indent",
+      "difficulty": "Novice",
+      "topic": "If Statements",
+      "correction": "if x > 10:\n    print('big')",
+      "hint": "What belongs inside the block?",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 2.0,
+        "Logic": 0.5,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_022",
+      "code": "def add(a, b):\n        result = a + b\n    return result",
+      "error_type": "Unexpected_Indent",
+      "difficulty": "Novice",
+      "topic": "Functions",
+      "correction": "def add(a, b):\n    result = a + b\n    return result",
+      "hint": "Check the alignment of each line inside the function.",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 2.0,
+        "Logic": 0.5,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_023",
+      "code": "print(name)\nname = 'Bob'",
+      "error_type": "Undefined_Variable",
+      "difficulty": "Novice",
+      "topic": "Variables",
+      "correction": "name = 'Bob'\nprint(name)",
+      "hint": "Are you using the variable before defining it?",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 1.0,
+        "Logic": 1.0,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_024",
+      "code": "def calc():\n    val = 10\n    return vla",
+      "error_type": "Misspelled_Identifier",
+      "difficulty": "Novice",
+      "topic": "Functions",
+      "correction": "def calc():\n    val = 10\n    return val",
+      "hint": "Are the variable names spelled consistently?",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 1.5,
+        "Logic": 0.5,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_025",
+      "code": "for i in range(5)\n    print(i)",
+      "error_type": "Missing_Colon",
+      "difficulty": "Novice",
+      "topic": "For Loops",
+      "correction": "for i in range(5):\n    print(i)",
+      "hint": "Look at the end of the for-statement.",
+      "skill_rewards": {
+        "Loops": 0.5,
+        "Recursion": 0.0,
+        "Syntax": 2.0,
+        "Logic": 0.5,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_026",
+      "code": "items = (1, 2, 3]\nprint(items)",
+      "error_type": "Bad_Parentheses",
+      "difficulty": "Novice",
+      "topic": "Tuples",
+      "correction": "items = (1, 2, 3)\nprint(items)",
+      "hint": "Which bracket types match for tuples?",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 2.0,
+        "Logic": 0.0,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_027",
+      "code": "count = 0\nwhile count < 3:\n    print(count)",
+      "error_type": "Infinite_Loop",
+      "difficulty": "Novice",
+      "topic": "While Loops",
+      "correction": "count = 0\nwhile count < 3:\n    print(count)\n    count += 1",
+      "hint": "What updates the loop variable?",
+      "skill_rewards": {
+        "Loops": 3.5,
+        "Recursion": 0.0,
+        "Syntax": 0.0,
+        "Logic": 1.0,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_028",
+      "code": "nums = [10,20,30]\nfor i in range(1,4):\n    print(nums[i])",
+      "error_type": "Off_By_One",
+      "difficulty": "Intermediate",
+      "topic": "Lists",
+      "correction": "for i in range(len(nums)):\n    print(nums[i])",
+      "hint": "Does your range align with valid list indices?",
+      "skill_rewards": {
+        "Loops": 3.0,
+        "Recursion": 0.0,
+        "Syntax": 0.0,
+        "Logic": 3.0,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_029",
+      "code": "temp = 25\nif temp > 30:\n    print('hot')\nelif temp > 20:\n    print('warm')\nelif temp > 10:\n    print('cool')",
+      "error_type": "Misordered_Conditions",
+      "difficulty": "Novice",
+      "topic": "Conditionals",
+      "correction": "temp = 25\nif temp > 20:\n    print('warm')\nelif temp > 30:\n    print('hot')\nelif temp > 10:\n    print('cool')",
+      "hint": "Are the conditions arranged from broadest to strictest?",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 0.0,
+        "Logic": 3.0,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_030",
+      "code": "def sum_to_n(n):\n    if n == 0:\n        return 0\n    return n + sum_to_n(n+1)",
+      "error_type": "Wrong_Recursive_Call",
+      "difficulty": "Intermediate",
+      "topic": "Recursion",
+      "correction": "def sum_to_n(n):\n    if n == 0:\n        return 0\n    return n + sum_to_n(n-1)",
+      "hint": "Should the recursive step increase or decrease n?",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 5.25,
+        "Syntax": 0.0,
+        "Logic": 3.0,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_031",
+      "code": "values = [1,2,3]\nprint(values[3])",
+      "error_type": "IndexError",
+      "difficulty": "Novice",
+      "topic": "List Indexing",
+      "correction": "values = [1,2,3]\nif 3 < len(values):\n    print(values[3])",
+      "hint": "Is index 3 valid for a list of length 3?",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 0.0,
+        "Logic": 1.0,
+        "Data_Structures": 2.0
+      }
+    },
+    {
+      "id": "ERR_032",
+      "code": "numbers = [1,2,3]\nprint(numbers * '3')",
+      "error_type": "Type_Mismatch",
+      "difficulty": "Novice",
+      "topic": "List Operations",
+      "correction": "numbers = [1,2,3]\nprint(numbers * 3)",
+      "hint": "Does list multiplication require an integer?",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 0.0,
+        "Logic": 2.0,
+        "Data_Structures": 1.0
+      }
+    },
+    {
+      "id": "ERR_033",
+      "code": "info = {'name': 'Tom'}\nprint(info['age'])",
+      "error_type": "KeyError",
+      "difficulty": "Novice",
+      "topic": "Dictionaries",
+      "correction": "info = {'name': 'Tom'}\nprint(info.get('age', 'unknown'))",
+      "hint": "Does the dictionary contain this key?",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 0.0,
+        "Logic": 1.0,
+        "Data_Structures": 2.0
+      }
+    },
+    {
+      "id": "ERR_034",
+      "code": "data = {'1': 'one'}\nprint(data[1])",
+      "error_type": "Wrong_Key_Type",
+      "difficulty": "Novice",
+      "topic": "Dictionary Access",
+      "correction": "data = {'1': 'one'}\nprint(data['1'])",
+      "hint": "Is the key type consistent with what you stored?",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 1.0,
+        "Logic": 0.0,
+        "Data_Structures": 2.0
+      }
+    },
+    {
+      "id": "ERR_035",
+      "code": "f = open('notes.txt', 'r')\ntext = f.read()\nprint(text)",
+      "error_type": "FileNotFound",
+      "difficulty": "Novice",
+      "topic": "File Handling",
+      "correction": "try:\n    f = open('notes.txt', 'r')\n    print(f.read())\nexcept FileNotFoundError:\n    print('File missing')",
+      "hint": "Does the file exist before opening it?",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 0.0,
+        "Logic": 1.5,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_036",
+      "code": "f = open('log.txt', 'r')\nf.write('entry')",
+      "error_type": "Wrong_File_Mode",
+      "difficulty": "Novice",
+      "topic": "File Writing",
+      "correction": "f = open('log.txt', 'w')\nf.write('entry')",
+      "hint": "Which mode allows writing?",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 0.0,
+        "Logic": 2.0,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_037",
+      "code": "class Item:\n    def __init__(self, name):\n        self.name = name\n\nitem = Item('pen')\nprint(item.cost)",
+      "error_type": "AttributeError",
+      "difficulty": "Intermediate",
+      "topic": "Classes",
+      "correction": "class Item:\n    def __init__(self, name, cost=None):\n        self.name = name\n        self.cost = cost\n\nitem = Item('pen', 5)\nprint(item.cost)",
+      "hint": "Is the attribute defined in the constructor?",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 0.0,
+        "Logic": 2.25,
+        "Data_Structures": 3.0
+      }
+    },
+    {
+      "id": "ERR_038",
+      "code": "class User:\n    def __init__(self, username):\n        self.username = username\n\nu = User()\nprint(u.username)",
+      "error_type": "Wrong_Constructor_Call",
+      "difficulty": "Intermediate",
+      "topic": "Classes",
+      "correction": "u = User('guest')\nprint(u.username)",
+      "hint": "Does this class require an argument?",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 1.5,
+        "Logic": 0.0,
+        "Data_Structures": 3.0
+      }
+    },
+    {
+      "id": "ERR_039",
+      "code": "if temperature = 30:\n    print('hot')",
+      "error_type": "Wrong_Comparison",
+      "difficulty": "Novice",
+      "topic": "Conditionals",
+      "correction": "if temperature == 30:\n    print('hot')",
+      "hint": "Are you confusing assignment and comparison?",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 0.5,
+        "Logic": 2.5,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_040",
+      "code": "age = 12\nif age > 5:\n    print('kid')\nelif age > 10:\n    print('preteen')",
+      "error_type": "Misordered_Conditions",
+      "difficulty": "Novice",
+      "topic": "If/Else",
+      "correction": "age = 12\nif age > 10:\n    print('preteen')\nelif age > 5:\n    print('kid')",
+      "hint": "Which condition is more specific?",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 0.0,
+        "Logic": 3.0,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_041",
+      "code": "def recurse(n):\n    return recurse(n-1)",
+      "error_type": "Missing_Base_Case",
+      "difficulty": "Intermediate",
+      "topic": "Recursion",
+      "correction": "def recurse(n):\n    if n == 0:\n        return 0\n    return recurse(n-1)",
+      "hint": "When should recursion stop?",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 5.25,
+        "Syntax": 0.0,
+        "Logic": 2.25,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_042",
+      "code": "def search(lst, x, i=0):\n    if lst[i] == x:\n        return i\n    return search(lst, x, i+1)",
+      "error_type": "Wrong_Recursive_Call",
+      "difficulty": "Intermediate",
+      "topic": "Recursion",
+      "correction": "def search(lst, x, i=0):\n    if i >= len(lst):\n        return -1\n    if lst[i] == x:\n        return i\n    return search(lst, x, i+1)",
+      "hint": "What happens when i reaches the end of the list?",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 5.25,
+        "Syntax": 0.0,
+        "Logic": 3.0,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_043",
+      "code": "for i in range(3):\nprint(i)",
+      "error_type": "Missing_Indent",
+      "difficulty": "Novice",
+      "topic": "For Loops",
+      "correction": "for i in range(3):\n    print(i)",
+      "hint": "Which line should be inside the loop?",
+      "skill_rewards": {
+        "Loops": 0.5,
+        "Recursion": 0.0,
+        "Syntax": 2.0,
+        "Logic": 0.5,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_044",
+      "code": "def multiply(x, y):\n    product = x * y\n        return product",
+      "error_type": "Unexpected_Indent",
+      "difficulty": "Novice",
+      "topic": "Functions",
+      "correction": "def multiply(x, y):\n    product = x * y\n    return product",
+      "hint": "Is every line aligned correctly in the function?",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 2.0,
+        "Logic": 0.5,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_045",
+      "code": "values = [1,2,3]\nprint(value)",
+      "error_type": "Undefined_Variable",
+      "difficulty": "Novice",
+      "topic": "Variables",
+      "correction": "values = [1,2,3]\nprint(values)",
+      "hint": "Do the variable names match exactly?",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 1.0,
+        "Logic": 1.0,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_046",
+      "code": "limit = 5\nfor i in range(limit):\n    if i > 2:\n        print('big')\nelif i == 1:\n    print('small')",
+      "error_type": "Misordered_Conditions",
+      "difficulty": "Intermediate",
+      "topic": "If/Elif",
+      "correction": "limit = 5\nfor i in range(limit):\n    if i == 1:\n        print('small')\n    elif i > 2:\n        print('big')",
+      "hint": "Which condition is more specific and should come first?",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 0.0,
+        "Logic": 4.5,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_047",
+      "code": "def multiply(a, b):\n    return a * multiply(a, b-1)",
+      "error_type": "Missing_Base_Case",
+      "difficulty": "Intermediate",
+      "topic": "Recursion",
+      "correction": "def multiply(a, b):\n    if b == 0:\n        return 0\n    return a + multiply(a, b-1)",
+      "hint": "When should the recursion stop decreasing b?",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 5.25,
+        "Syntax": 0.0,
+        "Logic": 2.25,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_048",
+      "code": "items = [1, 2, 3]\nfor i in range(4):\n    print(items[i])",
+      "error_type": "IndexError",
+      "difficulty": "Novice",
+      "topic": "List Indexing",
+      "correction": "items = [1, 2, 3]\nfor i in range(len(items)):\n    print(items[i])",
+      "hint": "Does the loop attempt to access an index that does not exist?",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 0.0,
+        "Logic": 1.0,
+        "Data_Structures": 2.0
+      }
+    },
+    {
+      "id": "ERR_049",
+      "code": "values = [1, 2, 3]\nprint(values + 10)",
+      "error_type": "Type_Mismatch",
+      "difficulty": "Novice",
+      "topic": "List Operations",
+      "correction": "values = [1, 2, 3]\nprint(values + [10])",
+      "hint": "Are list concatenations allowed with non-list types?",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 0.0,
+        "Logic": 2.0,
+        "Data_Structures": 1.0
+      }
+    },
+    {
+      "id": "ERR_050",
+      "code": "user = {'id': 1}\nprint(user['name'])",
+      "error_type": "KeyError",
+      "difficulty": "Novice",
+      "topic": "Dictionaries",
+      "correction": "user = {'id': 1}\nprint(user.get('name', 'unknown'))",
+      "hint": "Is the key guaranteed to exist?",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 0.0,
+        "Logic": 1.0,
+        "Data_Structures": 2.0
+      }
+    },
+    {
+      "id": "ERR_051",
+      "code": "stats = {10: 'high'}\nprint(stats['10'])",
+      "error_type": "Wrong_Key_Type",
+      "difficulty": "Novice",
+      "topic": "Dictionary Access",
+      "correction": "stats = {10: 'high'}\nprint(stats[10])",
+      "hint": "Is the lookup key the same type as the stored key?",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 1.0,
+        "Logic": 0.0,
+        "Data_Structures": 2.0
+      }
+    },
+    {
+      "id": "ERR_052",
+      "code": "f = open('records.csv', 'r')\nprint(f.readline())",
+      "error_type": "FileNotFound",
+      "difficulty": "Novice",
+      "topic": "File Reading",
+      "correction": "try:\n    f = open('records.csv', 'r')\n    print(f.readline())\nexcept FileNotFoundError:\n    print('File missing')",
+      "hint": "Are you sure the file exists in the working directory?",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 0.0,
+        "Logic": 1.5,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_053",
+      "code": "f = open('config.ini', 'r')\nf.write('mode=1')",
+      "error_type": "Wrong_File_Mode",
+      "difficulty": "Novice",
+      "topic": "File Writing",
+      "correction": "f = open('config.ini', 'w')\nf.write('mode=1')",
+      "hint": "Which file mode permits writing?",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 0.0,
+        "Logic": 2.0,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_054",
+      "code": "class Book:\n    def __init__(self, title):\n        self.title = title\n\nb = Book('AI 101')\nprint(b.author)",
+      "error_type": "AttributeError",
+      "difficulty": "Intermediate",
+      "topic": "Classes",
+      "correction": "class Book:\n    def __init__(self, title, author=None):\n        self.title = title\n        self.author = author\n\nb = Book('AI 101', 'Turing')\nprint(b.author)",
+      "hint": "Is the attribute defined inside the class?",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 0.0,
+        "Logic": 2.25,
+        "Data_Structures": 3.0
+      }
+    },
+    {
+      "id": "ERR_055",
+      "code": "class Point:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\n\np = Point(10)\nprint(p.x)",
+      "error_type": "Wrong_Constructor_Call",
+      "difficulty": "Intermediate",
+      "topic": "Classes",
+      "correction": "p = Point(10, 20)\nprint(p.x)",
+      "hint": "Does the constructor require both x and y parameters?",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 1.5,
+        "Logic": 0.0,
+        "Data_Structures": 3.0
+      }
+    },
+    {
+      "id": "ERR_056",
+      "code": "n = 5\nwhile n > 0:\n    print(n)\n    # missing decrement\nprint('done')",
+      "error_type": "Infinite_Loop",
+      "difficulty": "Novice",
+      "topic": "While Loops",
+      "correction": "n = 5\nwhile n > 0:\n    print(n)\n    n -= 1\nprint('done')",
+      "hint": "How does the value of n change each iteration?",
+      "skill_rewards": {
+        "Loops": 3.5,
+        "Recursion": 0.0,
+        "Syntax": 0.0,
+        "Logic": 1.0,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_057",
+      "code": "print(\"Hello world)",
+      "error_type": "Unclosed_String",
+      "difficulty": "Novice",
+      "topic": "Syntax",
+      "correction": "print(\"Hello world\")",
+      "hint": "It looks like the string starts with a quote but doesn't end with one.",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 2.0,
+        "Logic": 0.0,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_058",
+      "code": "print('Hello\")",
+      "error_type": "Mismatched_Quotes",
+      "difficulty": "Novice",
+      "topic": "Syntax",
+      "correction": "print('Hello')",
+      "hint": "Python requires the same type of quote (single or double) to open and close a string.",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 2.0,
+        "Logic": 0.0,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_059",
+      "code": "def add_item(item, box=[]):\n    box.append(item)\n    return box",
+      "error_type": "Mutable_Default_Arg",
+      "difficulty": "Intermediate",
+      "topic": "Functions",
+      "correction": "def add_item(item, box=None):\n    if box is None:\n        box = []\n    box.append(item)\n    return box",
+      "hint": "In Python, default arguments are evaluated only once. What happens if you call this function multiple times?",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 1.0,
+        "Logic": 3.0,
+        "Data_Structures": 2.0
+      }
+    },
+    {
+      "id": "ERR_060",
+      "code": "squares = [x**2 for x in range(10) if x % 2 = 0]",
+      "error_type": "Syntax_In_Comprehension",
+      "difficulty": "Intermediate",
+      "topic": "List Comprehensions",
+      "correction": "squares = [x**2 for x in range(10) if x % 2 == 0]",
+      "hint": "Check the comparison operator inside your list comprehension.",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 2.0,
+        "Logic": 2.0,
+        "Data_Structures": 1.0
+      }
+    },
+    {
+      "id": "ERR_061",
+      "code": "class Dog:\n    def __init__(self, name):\n        self.name = name\n\nclass Poodle(Dog):\n    def __init__(self, name, size):\n        self.size = size\n        # Missing super call",
+      "error_type": "Missing_Super_Call",
+      "difficulty": "Advanced",
+      "topic": "Classes",
+      "correction": "class Poodle(Dog):\n    def __init__(self, name, size):\n        super().__init__(name)\n        self.size = size",
+      "hint": "When overriding __init__, how do you ensure the parent class is also initialized?",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 1.0,
+        "Logic": 3.0,
+        "Data_Structures": 4.0
+      }
+    },
+    {
+      "id": "ERR_062",
+      "code": "def fib(n):\n    if n <= 1: return n\n    return fib(n-1) + fib(n-2)\n# Optimization error: This is too slow for large n",
+      "error_type": "Inefficient_Recursion",
+      "difficulty": "Advanced",
+      "topic": "Recursion",
+      "correction": "# Use memoization\nmemo = {}\ndef fib(n):\n    if n in memo: return memo[n]\n    if n <= 1: return n\n    memo[n] = fib(n-1) + fib(n-2)\n    return memo[n]",
+      "hint": "This algorithm works, but it recalculates the same values many times. How can you store results to speed it up?",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 6.0,
+        "Syntax": 0.0,
+        "Logic": 4.0,
+        "Data_Structures": 2.0
+      }
+    },
+    {
+      "id": "ERR_063",
+      "code": "def my_decorator(func):\n    def wrapper():\n        print('Something')\n        func()\n    # Missing return wrapper",
+      "error_type": "Decorator_Return_Error",
+      "difficulty": "Advanced",
+      "topic": "Decorators",
+      "correction": "def my_decorator(func):\n    def wrapper():\n        print('Something')\n        func()\n    return wrapper",
+      "hint": "A decorator must return a function to replace the original one. What is yours returning?",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 2.0,
+        "Logic": 5.0,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_064",
+      "code": "def count_up(n):\n    i = 0\n    while i < n:\n        return i # Wrong, should yield\n        i += 1",
+      "error_type": "Generator_Logic_Error",
+      "difficulty": "Advanced",
+      "topic": "Generators",
+      "correction": "def count_up(n):\n    i = 0\n    while i < n:\n        yield i\n        i += 1",
+      "hint": "Using 'return' stops the function immediately. How do you produce a sequence of values lazily?",
+      "skill_rewards": {
+        "Loops": 2.0,
+        "Recursion": 0.0,
+        "Syntax": 2.0,
+        "Logic": 4.0,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_065",
+      "code": "try:\n    x = 1 / 0\nexcept ValueError:\n    print('Error')",
+      "error_type": "Wrong_Exception_Type",
+      "difficulty": "Intermediate",
+      "topic": "Exception Handling",
+      "correction": "try:\n    x = 1 / 0\nexcept ZeroDivisionError:\n    print('Error')",
+      "hint": "Division by zero does not raise a ValueError. Which exception type should you catch?",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 1.0,
+        "Logic": 3.0,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_066",
+      "code": "x = 10\ndef change_x():\n    x += 5 # UnboundLocalError",
+      "error_type": "Scope_Error",
+      "difficulty": "Intermediate",
+      "topic": "Scope",
+      "correction": "x = 10\ndef change_x():\n    global x\n    x += 5",
+      "hint": "You are trying to modify a global variable inside a function without declaring it as global.",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 2.0,
+        "Logic": 3.0,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_067",
+      "code": "class Dog:\n    tricks = []  # Mistake: Shared across all dogs\n    def __init__(self, name):\n        self.name = name\n    def add_trick(self, trick):\n        self.tricks.append(trick)",
+      "error_type": "Mutable_Class_Attribute",
+      "difficulty": "Advanced",
+      "topic": "Classes",
+      "correction": "class Dog:\n    def __init__(self, name):\n        self.name = name\n        self.tricks = []  # Instance attribute",
+      "hint": "You defined 'tricks' at the class level. This means all Dogs share the exact same list!",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 1.0,
+        "Logic": 3.0,
+        "Data_Structures": 3.0
+      }
+    },
+    {
+      "id": "ERR_068",
+      "code": "class Point:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\n\np = Point(1, 2)\nprint('Point is: ' + p)  # TypeError",
+      "error_type": "Missing_Str_Method",
+      "difficulty": "Intermediate",
+      "topic": "Classes",
+      "correction": "class Point:\n    def __str__(self):\n        return f'({self.x}, {self.y})'\n# ...\nprint('Point is: ' + str(p))",
+      "hint": "Python doesn't know how to convert your custom Object into a string automatically.",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 2.0,
+        "Logic": 1.0,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_069",
+      "code": "class Account:\n    def __init__(self):\n        self.__balance = 0\n\na = Account()\nprint(a.__balance)  # AttributeError",
+      "error_type": "Private_Attribute_Access",
+      "difficulty": "Intermediate",
+      "topic": "Classes",
+      "correction": "# Use a getter or access properly\nprint(a._Account__balance) # Not recommended, but explains why",
+      "hint": "Double underscores (__) trigger name mangling. You cannot access this attribute directly from outside.",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 2.0,
+        "Logic": 2.0,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_070",
+      "code": "funcs = []\nfor i in range(3):\n    funcs.append(lambda: i)\n\nprint([f() for f in funcs])  # Prints [2, 2, 2]",
+      "error_type": "Late_Binding_Closure",
+      "difficulty": "Advanced",
+      "topic": "Lambdas",
+      "correction": "funcs.append(lambda x=i: x)",
+      "hint": "The lambda looks up 'i' when it is CALLED, not when it is defined. By then, the loop has finished.",
+      "skill_rewards": {
+        "Loops": 2.0,
+        "Recursion": 0.0,
+        "Syntax": 2.0,
+        "Logic": 5.0,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_071",
+      "code": "numbers = [1, 2, 3, 4]\nsquares = map(lambda x: x**2, numbers)\nprint(len(squares))  # TypeError",
+      "error_type": "Iterator_Len_Error",
+      "difficulty": "Intermediate",
+      "topic": "Iterators",
+      "correction": "squares = list(map(lambda x: x**2, numbers))\nprint(len(squares))",
+      "hint": "'map' returns an iterator, which doesn't have a length until you consume it (e.g., convert to list).",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 1.0,
+        "Logic": 0.0,
+        "Data_Structures": 2.0
+      }
+    },
+    {
+      "id": "ERR_072",
+      "code": "my_dict = {[1, 2]: 'value'}",
+      "error_type": "Unhashable_Key",
+      "difficulty": "Intermediate",
+      "topic": "Dictionaries",
+      "correction": "my_dict = {(1, 2): 'value'}",
+      "hint": "Dictionary keys must be immutable. Lists can change, so they cannot be keys. Try a tuple.",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 1.0,
+        "Logic": 0.0,
+        "Data_Structures": 3.0
+      }
+    },
+    {
+      "id": "ERR_073",
+      "code": "s = {1, 2, 3}\nprint(s[0])",
+      "error_type": "Set_Indexing",
+      "difficulty": "Novice",
+      "topic": "Sets",
+      "correction": "s = [1, 2, 3] # Use list if you need order\nprint(s[0])",
+      "hint": "Sets are unordered collections. You cannot access items by index.",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 1.0,
+        "Logic": 0.0,
+        "Data_Structures": 2.0
+      }
+    },
+    {
+      "id": "ERR_074",
+      "code": "d = {'a': 1, 'b': 2}\nfor k, v in d:\n    print(k, v)",
+      "error_type": "Dict_Iteration_Error",
+      "difficulty": "Novice",
+      "topic": "Dictionaries",
+      "correction": "for k, v in d.items():",
+      "hint": "Iterating over a dictionary just gives you the keys. Use .items() to get both.",
+      "skill_rewards": {
+        "Loops": 2.0,
+        "Recursion": 0.0,
+        "Syntax": 0.0,
+        "Logic": 0.0,
+        "Data_Structures": 1.0
+      }
+    },
+    {
+      "id": "ERR_075",
+      "code": "a = [1, 2, 3]\nb = a\nb.append(4)\nprint(a) # User expects [1, 2, 3]",
+      "error_type": "Aliasing_Bug",
+      "difficulty": "Intermediate",
+      "topic": "Memory References",
+      "correction": "b = a.copy()",
+      "hint": "Assignment '=' does not copy the list; it points to the same object. Modifying 'b' changes 'a'.",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 0.0,
+        "Logic": 2.0,
+        "Data_Structures": 3.0
+      }
+    },
+    {
+      "id": "ERR_076",
+      "code": "t = (1, 2, [3])\nt[2].append(4)\nt[2] = [3, 4] # TypeError",
+      "error_type": "Tuple_Assignment",
+      "difficulty": "Intermediate",
+      "topic": "Tuples",
+      "correction": "# You can modify the mutable list inside, but not reassign the slot\nt[2].append(4) # This works\n# t[2] = ... # This fails",
+      "hint": "Tuples are immutable (cannot reassign indices), but mutable objects *inside* them can still change.",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 1.0,
+        "Logic": 0.0,
+        "Data_Structures": 3.0
+      }
+    },
+    {
+      "id": "ERR_077",
+      "code": "nums = [1, 2, 3, 4]\nfor n in nums:\n    if n % 2 == 0:\n        nums.remove(n)",
+      "error_type": "Modifying_List_While_Iterating",
+      "difficulty": "Intermediate",
+      "topic": "Loops",
+      "correction": "for n in nums[:]: # Iterate over a copy\n    if n % 2 == 0: ...",
+      "hint": "Removing items from a list while iterating over it causes skipping. Iterate over a copy instead.",
+      "skill_rewards": {
+        "Loops": 4.0,
+        "Recursion": 0.0,
+        "Syntax": 0.0,
+        "Logic": 0.0,
+        "Data_Structures": 2.0
+      }
+    },
+    {
+      "id": "ERR_078",
+      "code": "def check(x):\n    if x > 0:\n        return 'Pos'\n    elif x < 0:\n        return 'Neg'\nprint(check(0)) # Prints None",
+      "error_type": "Implicit_None_Return",
+      "difficulty": "Novice",
+      "topic": "Functions",
+      "correction": "else:\n    return 'Zero'",
+      "hint": "If x is 0, neither condition is met. The function implicitly returns None.",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 0.5,
+        "Logic": 2.0,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_079",
+      "code": "x = 10\nif x > 5:\n    pass\n    print('Big') # Indentation error visual trick",
+      "error_type": "Pass_Statement_Usage",
+      "difficulty": "Novice",
+      "topic": "Syntax",
+      "correction": "# Remove pass or fix logic",
+      "hint": "'pass' does nothing. If you have code after it in the same block, 'pass' is redundant but valid.",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 1.0,
+        "Logic": 0.0,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_080",
+      "code": "name = 'Alice'\nname[0] = 'B'",
+      "error_type": "String_Immutability",
+      "difficulty": "Novice",
+      "topic": "Strings",
+      "correction": "name = 'B' + name[1:]",
+      "hint": "Strings in Python are immutable. You cannot change characters in place.",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 1.0,
+        "Logic": 0.0,
+        "Data_Structures": 2.0
+      }
+    },
+    {
+      "id": "ERR_081",
+      "code": "val = 1/3\nprint('Value: ' + val)",
+      "error_type": "String_Concatenation_Type",
+      "difficulty": "Novice",
+      "topic": "Strings",
+      "correction": "print(f'Value: {val}')",
+      "hint": "You can only concatenate strings with strings. Use f-strings or str(val).",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 1.0,
+        "Logic": 0.0,
+        "Data_Structures": 0.5
+      }
+    },
+    {
+      "id": "ERR_082",
+      "code": "if 0.1 + 0.2 == 0.3:\n    print('Math works')\nelse:\n    print('Floating point weirdness')",
+      "error_type": "Float_Precision",
+      "difficulty": "Advanced",
+      "topic": "Math",
+      "correction": "import math\nif math.isclose(0.1 + 0.2, 0.3):",
+      "hint": "Floating point numbers are stored in binary. 0.1 + 0.2 is actually 0.30000000000000004.",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 0.0,
+        "Logic": 4.0,
+        "Data_Structures": 1.0
+      }
+    },
+    {
+      "id": "ERR_083",
+      "code": "f = open('data.txt', 'w')\nf.write('Hello')\n# Missing close",
+      "error_type": "Missing_File_Close",
+      "difficulty": "Intermediate",
+      "topic": "Files",
+      "correction": "with open('data.txt', 'w') as f:\n    f.write('Hello')",
+      "hint": "If your program crashes before f.close(), the file may stay locked. Use a 'with' statement.",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 2.0,
+        "Logic": 1.0,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_084",
+      "code": "with open('data.txt', 'r') as f:\n    f.write('Hello')",
+      "error_type": "File_Mode_Mismatch",
+      "difficulty": "Intermediate",
+      "topic": "Files",
+      "correction": "open('data.txt', 'w')",
+      "hint": "You opened the file in read mode ('r'), but you are trying to write to it.",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 2.0,
+        "Logic": 0.0,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_085",
+      "code": "x = [1, 2, 3]\nprint(x.add(4))",
+      "error_type": "List_Attribute_Error",
+      "difficulty": "Novice",
+      "topic": "Lists",
+      "correction": "x.append(4)",
+      "hint": "Lists use .append(), not .add(). Sets use .add().",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 1.0,
+        "Logic": 0.0,
+        "Data_Structures": 1.0
+      }
+    },
+    {
+      "id": "ERR_086",
+      "code": "def foo(x):\n    return x + 1\n    print('Done')",
+      "error_type": "Unreachable_Code",
+      "difficulty": "Novice",
+      "topic": "Functions",
+      "correction": "# Move print before return",
+      "hint": "Code after 'return' is never executed.",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 1.0,
+        "Logic": 1.0,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_087",
+      "code": "import math\nprint(math.sqrt(-1))",
+      "error_type": "Domain_Error",
+      "difficulty": "Intermediate",
+      "topic": "Math",
+      "correction": "import cmath\nprint(cmath.sqrt(-1))",
+      "hint": "Real number square root cannot handle negatives. Use cmath for complex numbers.",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 0.0,
+        "Logic": 2.0,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_088",
+      "code": "x = 10\nif x = 10:\n    print(x)",
+      "error_type": "Assignment_In_Condition",
+      "difficulty": "Novice",
+      "topic": "Syntax",
+      "correction": "if x == 10:",
+      "hint": "Single '=' is assignment. Double '==' is comparison.",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 2.0,
+        "Logic": 0.0,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_089",
+      "code": "l = [1, 2, 3]\nprint(l[3])",
+      "error_type": "Index_Out_Of_Bounds",
+      "difficulty": "Novice",
+      "topic": "Lists",
+      "correction": "print(l[2])",
+      "hint": "List indices start at 0. The last item is at length-1.",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 0.0,
+        "Logic": 0.0,
+        "Data_Structures": 1.0
+      }
+    },
+    {
+      "id": "ERR_090",
+      "code": "x = '5'\ny = 2\nprint(x + y)",
+      "error_type": "Type_Error_Str_Int",
+      "difficulty": "Novice",
+      "topic": "Types",
+      "correction": "print(int(x) + y)",
+      "hint": "You cannot add a string and an integer directly.",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 1.0,
+        "Logic": 0.0,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_091",
+      "code": "def func(a, b=1, c):\n    pass",
+      "error_type": "Default_Args_Order",
+      "difficulty": "Intermediate",
+      "topic": "Functions",
+      "correction": "def func(a, c, b=1):",
+      "hint": "Non-default arguments cannot follow default arguments.",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 2.0,
+        "Logic": 0.0,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_092",
+      "code": "print(range(5)[5])",
+      "error_type": "Range_Index_Error",
+      "difficulty": "Novice",
+      "topic": "Loops",
+      "correction": "range(5)[4]",
+      "hint": "Range(5) produces 0, 1, 2, 3, 4. Index 5 does not exist.",
+      "skill_rewards": {
+        "Loops": 1.0,
+        "Recursion": 0.0,
+        "Syntax": 0.0,
+        "Logic": 0.0,
+        "Data_Structures": 1.0
+      }
+    },
+    {
+      "id": "ERR_093",
+      "code": "i = 0\nwhile i < 5:\n    print(i)",
+      "error_type": "Infinite_Loop_Missing_Increment",
+      "difficulty": "Novice",
+      "topic": "Loops",
+      "correction": "i += 1",
+      "hint": "The loop condition never becomes false because 'i' never changes.",
+      "skill_rewards": {
+        "Loops": 2.0,
+        "Recursion": 0.0,
+        "Syntax": 0.0,
+        "Logic": 0.0,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_094",
+      "code": "def my_gen():\n    yield 1\n    return 2\n\ng = my_gen()\nprint(next(g))\nprint(next(g))",
+      "error_type": "StopIteration_Return",
+      "difficulty": "Advanced",
+      "topic": "Generators",
+      "correction": "# Return in generator raises StopIteration",
+      "hint": "Returning in a generator stops the iteration. You cannot get '2' via next().",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 2.0,
+        "Logic": 3.0,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_095",
+      "code": "x = (1)\nprint(type(x))",
+      "error_type": "Single_Tuple_Parentheses",
+      "difficulty": "Novice",
+      "topic": "Tuples",
+      "correction": "x = (1,)",
+      "hint": "(1) is just the number 1. A single-item tuple needs a comma: (1,).",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 2.0,
+        "Logic": 0.0,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_096",
+      "code": "def add(a, b):\n    return a + b\nresult = add(1, 2, 3)",
+      "error_type": "Arg_Count_Mismatch",
+      "difficulty": "Novice",
+      "topic": "Functions",
+      "correction": "add(1, 2)",
+      "hint": "The function expects 2 arguments but you passed 3.",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 1.0,
+        "Logic": 0.0,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_097",
+      "code": "d = {'a': 1}\nprint(d['b'])",
+      "error_type": "Key_Error",
+      "difficulty": "Novice",
+      "topic": "Dictionaries",
+      "correction": "d.get('b')",
+      "hint": "Accessing a missing key directly crashes. Use .get() or check if key exists.",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 0.0,
+        "Logic": 0.0,
+        "Data_Structures": 1.0
+      }
+    },
+    {
+      "id": "ERR_098",
+      "code": "if True:\nprint('Hello')",
+      "error_type": "Indentation_Error",
+      "difficulty": "Novice",
+      "topic": "Syntax",
+      "correction": "    print('Hello')",
+      "hint": "Python relies on indentation to define blocks.",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 2.0,
+        "Logic": 0.0,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_099",
+      "code": "import random\nprint(random.choice([]))",
+      "error_type": "IndexError_Empty_Seq",
+      "difficulty": "Intermediate",
+      "topic": "Libraries",
+      "correction": "# Check for empty",
+      "hint": "Cannot choose from an empty sequence.",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 0.0,
+        "Logic": 2.0,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_100",
+      "code": "x = 10\ndef f():\n    print(x)\n    x = 20",
+      "error_type": "UnboundLocalError_Assignment",
+      "difficulty": "Intermediate",
+      "topic": "Scope",
+      "correction": "global x",
+      "hint": "Python sees you assigning to 'x' later, so it treats 'x' as local everywhere in the function, failing the print.",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 1.0,
+        "Logic": 4.0,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_101",
+      "code": "s = 'hello'\ns.append('!')",
+      "error_type": "AttributeError_String",
+      "difficulty": "Novice",
+      "topic": "Strings",
+      "correction": "s += '!'",
+      "hint": "Strings don't have .append().",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 0.0,
+        "Logic": 0.0,
+        "Data_Structures": 1.0
+      }
+    },
+    {
+      "id": "ERR_102",
+      "code": "a = 5\nprint(a++1)",
+      "error_type": "Increment_Operator_Confusion",
+      "difficulty": "Novice",
+      "topic": "Syntax",
+      "correction": "a += 1",
+      "hint": "Python does not have a '++' operator. This is interpreted as a + (+1).",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 1.0,
+        "Logic": 0.0,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_103",
+      "code": "my_list = [1, 2, 3]\nreversed_list = my_list.reverse()\nprint(reversed_list) # Prints None",
+      "error_type": "In_Place_Method_Return",
+      "difficulty": "Novice",
+      "topic": "Lists",
+      "correction": "my_list.reverse()\nprint(my_list)",
+      "hint": "The .reverse() method modifies the list in-place and returns None. Do not assign its result.",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 1.0,
+        "Logic": 0.0,
+        "Data_Structures": 2.0
+      }
+    },
+    {
+      "id": "ERR_104",
+      "code": "counts = {'a': 1}\n# Crashes if 'b' is missing because default is None\nval = counts.get('b') + 1",
+      "error_type": "Dict_Get_None_Type",
+      "difficulty": "Intermediate",
+      "topic": "Dictionaries",
+      "correction": "val = counts.get('b', 0) + 1",
+      "hint": "If .get() doesn't find the key, it returns None by default. You cannot add 1 to None.",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 0.0,
+        "Logic": 1.0,
+        "Data_Structures": 2.0
+      }
+    },
+    {
+      "id": "ERR_105",
+      "code": "index = 10 / 2\nmy_list = [1, 2, 3, 4, 5, 6]\nprint(my_list[index]) # TypeError",
+      "error_type": "Float_Indexing",
+      "difficulty": "Novice",
+      "topic": "Types",
+      "correction": "index = 10 // 2",
+      "hint": "The single slash '/' operator always returns a float (5.0). List indices must be integers.",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 1.5,
+        "Logic": 0.0,
+        "Data_Structures": 1.0
+      }
+    },
+    {
+      "id": "ERR_106",
+      "code": "matrix = [[1, 2], [3, 4]]\ncopy_matrix = matrix[:]\ncopy_matrix[0].append(99)\n# This modifies the ORIGINAL matrix too!",
+      "error_type": "Shallow_Copy_Bug",
+      "difficulty": "Advanced",
+      "topic": "Memory",
+      "correction": "import copy\ncopy_matrix = copy.deepcopy(matrix)",
+      "hint": "Slicing [:] creates a shallow copy. The inner lists are still references to the same objects in memory.",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 0.0,
+        "Logic": 3.0,
+        "Data_Structures": 4.0
+      }
+    },
+    {
+      "id": "ERR_107",
+      "code": "try:\n    x = int('not_a_number')\nexcept ValueError:\n    print('Handled')\nelse:\n    # User thinks this runs if error WAS caught\n    print('Error logic done')",
+      "error_type": "Else_Block_Misunderstanding",
+      "difficulty": "Intermediate",
+      "topic": "Control Flow",
+      "correction": "finally:\n    print('Cleanup done')",
+      "hint": "The 'else' block in a try/except statement ONLY runs if NO exception occurred.",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 1.0,
+        "Logic": 3.0,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_108",
+      "code": "import re\ntext = 'The price is $5.00'\nmatch = re.search('$\\d+', text)\nprint(match.group())",
+      "error_type": "Regex_Special_Char",
+      "difficulty": "Advanced",
+      "topic": "Regex",
+      "correction": "match = re.search('\\$\\d+', text)",
+      "hint": "The '$' symbol is a special character in Regex (end of line). You need to escape it to match a literal dollar sign.",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 2.0,
+        "Logic": 3.0,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_109",
+      "code": "import math\nprint(math.ceil(2.3))\nprint(math.floor(2.7))\n# User expects rounding to nearest",
+      "error_type": "Rounding_Logic",
+      "difficulty": "Novice",
+      "topic": "Math",
+      "correction": "print(round(2.3))\nprint(round(2.7))",
+      "hint": "Ceil always goes up, Floor always goes down. If you want standard rounding (nearest integer), use round().",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 0.0,
+        "Logic": 1.0,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_110",
+      "code": "import json\ndata = {'id': 1}\njson_str = json.loads(data)",
+      "error_type": "Json_Dump_Load_Confusion",
+      "difficulty": "Novice",
+      "topic": "JSON",
+      "correction": "json_str = json.dumps(data)",
+      "hint": "json.loads() turns a String into a Dict. You are trying to turn a Dict into a String.",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 1.0,
+        "Logic": 0.0,
+        "Data_Structures": 2.0
+      }
+    },
+    {
+      "id": "ERR_111",
+      "code": "def is_palindrome(s):\n    return s == s.reverse()",
+      "error_type": "String_Method_Error",
+      "difficulty": "Intermediate",
+      "topic": "Strings",
+      "correction": "return s == s[::-1]",
+      "hint": "Strings in Python do not have a .reverse() method. Try slicing with step -1.",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 1.0,
+        "Logic": 0.0,
+        "Data_Structures": 2.0
+      }
+    },
+    {
+      "id": "ERR_112",
+      "code": "x = [[]] * 3\nx[0].append(1)\nprint(x) # Prints [[1], [1], [1]] - Surprise!",
+      "error_type": "List_Mult_Reference",
+      "difficulty": "Advanced",
+      "topic": "Memory References",
+      "correction": "x = [[] for _ in range(3)]",
+      "hint": "Multiplying a list of mutable objects creates references to the *same* object. Changing one changes them all.",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 0.0,
+        "Logic": 3.0,
+        "Data_Structures": 4.0
+      }
+    },
+    {
+      "id": "ERR_113",
+      "code": "for i in range(10):\n    if i == 5:\n        break\nelse:\n    print('Loop finished')",
+      "error_type": "For_Else_Logic",
+      "difficulty": "Intermediate",
+      "topic": "Control Flow",
+      "correction": "# Logic check: else only runs if NO break occurs",
+      "hint": "The 'else' block of a loop only executes if the loop finishes naturally (without hitting a break).",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 1.0,
+        "Logic": 3.0,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_114",
+      "code": "x = 10\nwhile x > 0:\n    x -= 1\n    if x % 2 == 0:\n        continue\n    print(x)\n    # Logic check: decrement must happen before continue",
+      "error_type": "Continue_Placement",
+      "difficulty": "Intermediate",
+      "topic": "Loops",
+      "correction": "# Ensure decrement happens before continue",
+      "hint": "If you put the decrement after the continue statement in a while loop, you might skip the decrement and create an infinite loop.",
+      "skill_rewards": {
+        "Loops": 3.0,
+        "Recursion": 0.0,
+        "Syntax": 0.0,
+        "Logic": 2.0,
+        "Data_Structures": 0.0
+      }
+    },
+    {
+      "id": "ERR_115",
+      "code": "a = 256\nb = 256\nprint(a is b) # True\n\nx = 300\ny = 300\nprint(x is y) # False (usually)",
+      "error_type": "Small_Int_Caching",
+      "difficulty": "Advanced",
+      "topic": "Memory",
+      "correction": "print(x == y)",
+      "hint": "Python caches small integers (-5 to 256). For larger numbers, 'is' checks memory address (which differs), while '==' checks value.",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 0.0,
+        "Logic": 4.0,
+        "Data_Structures": 2.0
+      }
+    },
+    {
+      "id": "ERR_116",
+      "code": "def foo(a, b, c):\n    print(a, b, c)\n\nargs = [1, 2, 3]\nfoo(args)",
+      "error_type": "Argument_Unpacking",
+      "difficulty": "Intermediate",
+      "topic": "Functions",
+      "correction": "foo(*args)",
+      "hint": "You are passing the entire list as the first argument 'a'. Use the asterisk (*) to unpack the list into separate arguments.",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 2.0,
+        "Logic": 0.0,
+        "Data_Structures": 0.0,
+        "Functions": 1.0
+      }
+    },
+    {
+      "id": "ERR_117",
+      "code": "if bool('False'):\n    print('It is true!')",
+      "error_type": "Boolean_Casting",
+      "difficulty": "Novice",
+      "topic": "Types",
+      "correction": "if False: # or check s == 'True'",
+      "hint": "Any non-empty string is evaluated as True in Python, even the string 'False'.",
+      "skill_rewards": {
+        "Loops": 0.0,
+        "Recursion": 0.0,
+        "Syntax": 1.0,
+        "Logic": 1.0,
+        "Data_Structures": 0.0
+      }
+    }
+  ]
+}
