@@ -52,14 +52,23 @@ User → Streamlit UI → AI Tutor → Semantic Retriever → Skill Engine → A
 
 # 🚀 Installation
 
-```bash
-git clone <your-repo-url>
-cd <repo-folder>
-python -m venv venv
-source venv/bin/activate   # Windows: venv\Scripts\activate
-pip install -r requirements.txt
-```
-
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/Tomer-C/Interactive-Systems---Socratic-Tutor.git](https://github.com/Tomer-C/Interactive-Systems---Socratic-Tutor.git)
+   cd Interactive-Systems---Socratic-Tutor
+   ```
+2. **Set up the virtual environment:**
+   ```bash
+   python -m venv venv
+   # Activate on Mac/Linux:
+   source venv/bin/activate
+   # Activate on Windows:
+   venv\Scripts\activate
+   ```
+3. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
 ---
 
 # 🔐 Gemini API Key Setup (VERY IMPORTANT)
