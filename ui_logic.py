@@ -283,7 +283,7 @@ def top_header():
             <div style="display:flex; justify-content:space-between; align-items:center; gap:10px;">
                 <div>
                     <div style="font-size:28px; font-weight:800;">🦉 Hello, {name}!</div>
-                    <div style="opacity:0.82; margin-top:2px;">Let’s debug smart — tiny hints, big progress.</div>
+                    <div style="opacity:0.82; margin-top:2px;">Active learning through Socratic guidance — master the logic, not just the fix.</div>
                 </div>
                 <div style="text-align:right;">
                     <span class="pill">Phase: {step_name}</span>
@@ -1100,4 +1100,5 @@ def render_step3_fix():
             database.update_user_skills(st.session_state.user_id, new_skills)
         else:
             st.error(f"❌ {reason}")
+
             st.session_state.chat.append({"role": "assistant", "content": reason})
