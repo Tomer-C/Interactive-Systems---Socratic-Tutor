@@ -12,12 +12,11 @@ EMBEDDING_MODEL_NAME = "microsoft/codebert-base"
 
 # Define a list of keys
 GEMINI_KEYS = [
-    "AIzaSyDfEOjC1u7SSAD7snGfvsxkMrq00p9yTlI",
-    "AIzaSyDLWxkzz1iGuTKUbm79tZBxb8WvZ0Z44pc",
-    "AIzaSyBIQtkVYEh-17j-4QjNjn_QR--r6jMXfxg",
-    "AIzaSyBM9HMxr3hMxjFpXGQiIi9T4Mz2DwAwkk0",
-    "AIzaSyCf6_dNwM6N0s85Q-Pb_t8WBii00cP8bxY"
+    "enter your API key here",
+    "enter another API key here",
+    ...
 ]
 
 CONFIDENCE_THRESHOLD = 0.60
 SYNTAX_THRESHOLD = 0.40
+
